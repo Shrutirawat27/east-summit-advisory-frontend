@@ -5,7 +5,6 @@ const ContactForm = () => {
     firstName: '',
     lastName: '',
     email: '',
-    service: 'Tax Planning',
     message: ''
   });
 
@@ -15,8 +14,21 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Submitted:", formData);
-    alert("Thank you! We will connect this to the server soon.");
+    
+    // 1. Recipient
+    const recipient = "RavinderS@eastsummitadvisory.com";
+
+    // 2. Subject (Kept this so you know it's from the website)
+    const subject = `Website Inquiry from ${formData.firstName} ${formData.lastName}`;
+
+    // 3. Body (UPDATED: Just the message, no extra labels)
+    const body = formData.message;
+
+    // 4. Create mailto link
+    const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // 5. Open email client
+    window.location.href = mailtoLink;
   };
 
   return (
@@ -30,6 +42,7 @@ const ContactForm = () => {
             <input 
               name="firstName" 
               type="text" 
+              required
               onChange={handleChange}
               className="w-full px-3 py-2.5 lg:px-4 lg:py-3 rounded-lg border border-gray-200 focus:border-[#1e5faf] focus:ring-1 focus:ring-[#1e5faf] outline-none transition text-sm lg:text-base" 
               placeholder="John" 
@@ -53,33 +66,19 @@ const ContactForm = () => {
           <input 
             name="email" 
             type="email" 
+            required
             onChange={handleChange}
             className="w-full px-3 py-2.5 lg:px-4 lg:py-3 rounded-lg border border-gray-200 focus:border-[#1e5faf] focus:ring-1 focus:ring-[#1e5faf] outline-none transition text-sm lg:text-base" 
             placeholder="john@company.com" 
           />
         </div>
 
-        {/* SERVICE DROPDOWN */}
-        {/* <div>
-          <label className="block text-[#0f2c4a] font-bold text-xs lg:text-sm mb-1 lg:mb-2">Service Interested In</label>
-          <select 
-            name="service" 
-            onChange={handleChange}
-            className="w-full px-3 py-2.5 lg:px-4 lg:py-3 rounded-lg border border-gray-200 focus:border-[#1e5faf] focus:ring-1 focus:ring-[#1e5faf] outline-none transition text-gray-600 text-sm lg:text-base"
-          >
-            <option>Tax Planning</option>
-            <option>Audit & Assurance</option>
-            <option>Business Advisory</option>
-            <option>CFO Services</option>
-            <option>Other</option>
-          </select>
-        </div> */}
-
         {/* MESSAGE FIELD */}
         <div>
           <label className="block text-[#0f2c4a] font-bold text-xs lg:text-sm mb-1 lg:mb-2">Message</label>
           <textarea 
             name="message" 
+            required
             onChange={handleChange}
             className="w-full px-3 py-2.5 lg:px-4 lg:py-3 rounded-lg border border-gray-200 focus:border-[#1e5faf] focus:ring-1 focus:ring-[#1e5faf] outline-none transition h-24 lg:h-32 text-sm lg:text-base resize-none" 
             placeholder="How can I help you?"
@@ -90,6 +89,11 @@ const ContactForm = () => {
         <button type="submit" className="w-full bg-[#1e5faf] hover:bg-[#164a8a] text-white py-3 lg:py-4 rounded-lg font-bold text-sm lg:text-base shadow-md transition-all">
           Send Message
         </button>
+        
+        <p className="text-xs text-gray-400 text-center mt-2">
+          (This will open your default email app)
+        </p>
+
       </form>
     </div>
   );
