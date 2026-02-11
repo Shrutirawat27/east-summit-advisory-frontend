@@ -14,20 +14,10 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    // 1. Recipient
     const recipient = "RavinderS@eastsummitadvisory.com";
-
-    // 2. Subject (Kept this so you know it's from the website)
     const subject = `Website Inquiry from ${formData.firstName} ${formData.lastName}`;
-
-    // 3. Body (UPDATED: Just the message, no extra labels)
     const body = formData.message;
-
-    // 4. Create mailto link
     const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-    // 5. Open email client
     window.location.href = mailtoLink;
   };
 
@@ -89,10 +79,6 @@ const ContactForm = () => {
         <button type="submit" className="w-full bg-[#1e5faf] hover:bg-[#164a8a] text-white py-3 lg:py-4 rounded-lg font-bold text-sm lg:text-base shadow-md transition-all">
           Send Message
         </button>
-        
-        <p className="text-xs text-gray-400 text-center mt-2">
-          (This will open your default email app)
-        </p>
 
       </form>
     </div>
