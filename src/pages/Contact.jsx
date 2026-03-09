@@ -12,7 +12,7 @@ const Contact = () => {
         </h1>
 
         <p className="text-[#556987] text-base lg:text-lg max-w-2xl mx-auto font-medium leading-relaxed">
-          Get in touch with me directly to discuss your financial strategy.
+          Ready to simplify your taxes? Schedule a consultation to discuss personalized tax preparation and proactive planning for you or your business.
         </p>
       </div>
 
