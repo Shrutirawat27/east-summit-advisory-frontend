@@ -55,14 +55,14 @@ const Hero = () => {
             </div>
 
             {/* Trust Signal */}
-            <div className="mt-10 flex items-center justify-start gap-3 text-sm text-gray-400">
+            {/* <div className="mt-10 flex items-center justify-start gap-3 text-sm text-gray-400">
               <div className="flex -space-x-2">
                  <div className="w-8 h-8 rounded-full bg-gray-600 border-2 border-[#0f2c4a]"></div>
                  <div className="w-8 h-8 rounded-full bg-gray-500 border-2 border-[#0f2c4a]"></div>
                  <div className="w-8 h-8 rounded-full bg-gray-400 border-2 border-[#0f2c4a]"></div>
               </div>
               <p>Trusted by <span className="text-white font-bold">500+</span> businesses</p>
-            </div>
+            </div> */}
 
           </div>
 

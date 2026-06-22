@@ -21,7 +21,7 @@ const Home = () => {
         <ServicesGrid isHome={true} />
       </div>
 
-      <Testimonials />
+      {/* <Testimonials /> */}
 
     </div>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import founderImage from '../assets/founder-pic.jpeg';
 
 const About = () => {
   return (
@@ -22,8 +23,8 @@ const About = () => {
               
               <div className="w-full h-[280px] lg:h-[500px] rounded-lg overflow-hidden mb-6 lg:mb-8 relative bg-gray-100 shadow-inner">
                  <img 
-                  src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1000" 
-                  alt="Founder Portrait" 
+                  src={founderImage} 
+                  alt="Ravinder Singh - Founder" 
                   className="w-full h-full object-cover object-top" 
                 />
               </div>
