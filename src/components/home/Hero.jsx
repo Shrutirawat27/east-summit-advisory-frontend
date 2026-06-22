@@ -78,7 +78,7 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f2c4a]/80 via-transparent to-transparent opacity-60"></div>
               </div>
 
-              <div className="absolute -top-6 -right-6 z-20 bg-white p-4 rounded-xl shadow-xl border border-gray-100 hidden lg:block animate-bounce-slow">
+              {/* <div className="absolute -top-6 -right-6 z-20 bg-white p-4 rounded-xl shadow-xl border border-gray-100 hidden lg:block animate-bounce-slow">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 font-bold text-xl">
                     ✓
@@ -88,7 +88,7 @@ const Hero = () => {
                     <p className="text-[#0f2c4a] font-bold text-lg">15+ Years</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               <div className="absolute -bottom-6 -left-6 z-20 bg-[#1e5faf] p-5 rounded-xl shadow-2xl border border-blue-400 hidden lg:block">
                 <p className="text-blue-200 text-xs font-bold uppercase tracking-wider mb-1">Focus</p>

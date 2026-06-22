@@ -21,13 +21,13 @@ const About = () => {
           <div className="lg:w-2/5 w-full">
             <div className="bg-white p-6 lg:p-8 rounded-xl border border-gray-200 shadow-lg relative lg:sticky lg:top-24">
               
-              <div className="w-full h-[280px] lg:h-[500px] rounded-lg overflow-hidden mb-6 lg:mb-8 relative bg-gray-100 shadow-inner">
-                 <img 
-                  src={founderImage} 
-                  alt="Ravinder Singh - Founder" 
-                  className="w-full h-full object-cover object-top" 
-                />
-              </div>
+              <div className="w-full aspect-square lg:aspect-auto lg:h-[500px] rounded-lg overflow-hidden mb-6 lg:mb-8 relative bg-gray-100 shadow-inner">
+   <img 
+    src={founderImage} 
+    alt="Ravinder Singh - Founder" 
+    className="w-full h-full object-cover object-bottom" 
+  />
+</div>
               
               <div className="text-center">
                 <h3 className="text-[#0f2c4a] text-2xl lg:text-3xl font-bold mb-2">Ravinder Singh</h3>
@@ -37,23 +37,24 @@ const About = () => {
                 
                 <div className="w-full h-px bg-gray-100 mb-6 lg:mb-8"></div>
 
-                <div className="grid grid-cols-2 gap-4 lg:gap-6 text-left px-2">
-                  <div>
-                    <span className="block text-gray-400 text-[10px] lg:text-xs uppercase font-bold mb-1">Experience</span>
-                    <span className="text-[#0f2c4a] font-bold text-lg lg:text-xl">15+ Years</span>
-                  </div>
-                  <div>
-                    <span className="block text-gray-400 text-[10px] lg:text-xs uppercase font-bold mb-1">License</span>
-                    <span className="text-[#0f2c4a] font-bold text-lg lg:text-xl">IL & NY</span>
-                  </div>
-                  <div>
-                    <span className="block text-gray-400 text-[10px] lg:text-xs uppercase font-bold mb-1">Focus</span>
-                    <span className="text-[#0f2c4a] font-bold text-lg lg:text-xl">Corp. Tax</span>
-                  </div>
-                  <div>
+                <div className="grid grid-cols-3 divide-x divide-gray-200 text-center px-2">
+  <div className="px-2">
+    <span className="block text-gray-400 text-[10px] lg:text-xs uppercase font-bold mb-1">Experience</span>
+    <span className="text-[#0f2c4a] font-bold text-base lg:text-lg">7+ Years</span>
+  </div>
+  <div className="px-2">
+    <span className="block text-gray-400 text-[10px] lg:text-xs uppercase font-bold mb-1">License</span>
+    <span className="text-[#0f2c4a] font-bold text-base lg:text-lg">Illinois</span>
+  </div>
+  <div className="px-2">
+    <span className="block text-gray-400 text-[10px] lg:text-xs uppercase font-bold mb-1">Focus</span>
+    <span className="text-[#0f2c4a] font-bold text-base lg:text-lg">Corp. Tax</span>
+  </div>
+
+                  {/* <div>
                     <span className="block text-gray-400 text-[10px] lg:text-xs uppercase font-bold mb-1">Clients</span>
                     <span className="text-[#0f2c4a] font-bold text-lg lg:text-xl">500+</span>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Contact Button */}

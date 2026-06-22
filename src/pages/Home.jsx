@@ -9,7 +9,7 @@ const Home = () => {
     <div className="w-full">
 
       <Hero />
-      <Stats />
+      {/* <Stats /> */}
 
       <div className="bg-gray-50 pt-20 pb-0">
         <div className="text-center max-w-3xl mx-auto px-6 mb-8">
